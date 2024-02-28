@@ -8,15 +8,15 @@ import { SamplePage } from './Pages/SamplePage.tsx';
 
 const router = createBrowserRouter([
   {
-    path: "personal-portfolio",
+    path: "/personal-portfolio/",
     element: <App />,
     children: [
       {
-        path: "personal-portfolio",
+        path: "/personal-portfolio/",
         element: <Home />
       },
       {
-        path: "personal-portfolio/sample-page",
+        path: "/personal-portfolio/sample-page",
         element: <SamplePage />
       }
     ]
