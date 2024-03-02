@@ -1,34 +1,29 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [question, setQuestion] = useState('Do you love Kane?')
+  const [clickedNo, setClickedNo] = useState(false)
+  const onPressYes = () => {
+    setQuestion(clickedNo ? "Why are you clicking yes now 🥺, Too Late" : "Kane loves you Loads ♥️ Call Kane Now 🥺")
+    
+  }
+
+  const onPressNo = () => {
+    setQuestion("Kane is Sad 💔, Raghel broke Kane's Heart 😖, Raghel Doesn't love Kane, Raghel is Bad Bad Bad")
+    setClickedNo(true)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+        <h1>Today's Quiz for Ms. Raghel Merlin Kirubai 🤨</h1>
+        <h2>{question}</h2>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div style={{ display: 'flex', width: '50%', justifyContent: 'space-around' }}>
+        <button onClick={onPressYes}>Yes</button>
+        <button onClick={onPressNo}>No</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   );
 }
 
