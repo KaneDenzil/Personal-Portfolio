@@ -13,8 +13,6 @@ const Navbar = () => {
   // Array containing navigation items
   const navItems = [
     { id: 1, text: 'Home' },
-    { id: 2, text: 'Company' },
-    { id: 3, text: 'Resources' },
     { id: 4, text: 'About' },
     { id: 5, text: 'Contact' },
   ];
@@ -38,7 +36,6 @@ const Navbar = () => {
       <div onClick={handleNav} className='block md:hidden'>
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
-
       {/* Mobile Navigation Menu */}
       <ul
         className={
@@ -47,9 +44,6 @@ const Navbar = () => {
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
         }
       >
-        {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>REACT.</h1>
-
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
           <li
