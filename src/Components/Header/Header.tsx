@@ -6,7 +6,7 @@ export const Header = () => {
     <HeaderContainer>
       <StyledHeader> I'm a </StyledHeader>
       <StyledHeader>
-        <Typewriter words={['Web Developer', 'Mobile Developer']} />
+        <Typewriter words={['Web Developer', 'Mobile Developer']} loop={0} cursor />
       </StyledHeader>
     </HeaderContainer>
   );
